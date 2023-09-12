@@ -27,7 +27,7 @@ body {
 }
 
 .items {
-  width: 100%;
+  width: 125%;
   justify-content: left;
   gap: 1px;
 }
@@ -50,7 +50,8 @@ body {
   width: 100%;
 }
 
-.text-center {
+.text-center,
+.mob-menu a {
   text-align: center;
 }
 
@@ -95,7 +96,8 @@ body {
   /* justify-content: space-around;
   justify-content: space-between;
   justify-content: space-evenly; */
-  gap: 8px;
+  gap: 15px;
+  align-items: center;
 }
 
 .badge {
@@ -131,9 +133,10 @@ body {
   .bag {
     display: none;
   }
-  .search-desk {
-    display: none;
-  }
+  /* .search-desk {
+    display: none; 
+    
+  } */
   .nav-desk {
     display: none;
   }
@@ -145,6 +148,27 @@ body {
     height: 50%;
     width: 50%;
   }
+  .items-wrapper-mob{
+    /* align-items: center; */
+    padding-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .items-mob {
+    /* flex-direction: column; */
+    align-items: center;
+    /* padding: 20px; */
+    flex-flow: column;
+    width: 100%;
+    flex-grow: 100%
+
+  }
+  /* .items-start{
+    
+  }
+  .item{
+     
+  } */
 }
 
 @media (min-width: 571px) {
@@ -158,13 +182,15 @@ body {
   font-size: 1.5rem;
 }
 
-.navbar-collapse {
+.mob-menu {
   background-color: #000;
-  /* position: relative;
-  top: 0;
+  position: relative;
+  /* top: 0; */
   left: 0;
   right: 0;
-  bottom: 0; */
+  /* bottom: 0; */
+  z-index: 1000;
+  width: 100%;
 }
 .navbar-collapse a {
   color: #fff;
