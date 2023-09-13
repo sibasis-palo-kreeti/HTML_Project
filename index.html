@@ -12,25 +12,18 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- x -->
-    <!-- <img src="assets/logo.png" alt="Shopping Cart Logo" />
-
-    <input type="search" id="form1" class="search" placeholder="Search" /> -->
-
-    <section class="p-4 mb-4 d-flex align-items-left flex-column">
-      <!-- Navbar -->
-      <!--Navbar-->
-
-      <!-- Logo and Search Bar -->
-      <nav class="navbar navbar-expand-md bg-light pb-4 top-bar fixed-top">
+    <section class="container">
+      <!-- Top Bar -->
+      <header class="navbar navbar-expand-md bg-light pb-4 top-bar">
         <!-- Container wrapper -->
-        <div class="container-fluid">
-          <!-- Navbar brand -->
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap"
+        >
           <img src="assets/logo.png" alt="" class="logo" />
-
-          <div class="d-flex flex-row">
-            <section class="d-md-none d-lg-none cart-mob px-3 ml-auto pt-2">
+          <section class="d-md-none d-lg-none d-flex gap-2 align-items-center">
+            <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -44,7 +37,7 @@
                 />
               </svg>
               <span class="badge badge-warning" id="lblCartCount">2</span>
-            </section>
+            </div>
             <!-- Collapsible wrapper -->
 
             <!-- Collapse button -->
@@ -59,38 +52,9 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-          </div>
-
-          <div
-            class="d-md-none d-lg-none d-sm-block collapse navbar-collapse mob-menu"
-            class="ham-mob"
-            id="navbarNav"
-          >
-            <ul
-              class="navbar-nav d-lg-none d-md-none d-sm-block navbarNav ham-mob"
-            >
-              <li class="nav-item">
-                <a class="nav-link navbar-brand" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navbar-brand" href="/about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navbar-brand" href="/offers">Offers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navbar-brand" href="/testimonials"
-                  >Testimonials</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navbar-brand" href="/contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-
+          </section>
           <div class="search-desk" id="navbarSupportedContent">
-            <div class="input-group ps-5 justify-content-end d-sm-none">
+            <div class="input-group ps-5 justify-content-end">
               <div id="navbar-search-autocomplete" class="form-outline">
                 <input
                   type="search"
@@ -103,13 +67,38 @@
           </div>
         </div>
 
+        <div
+          class="d-md-none d-lg-none d-sm-block collapse navbar-collapse mob-menu"
+          class="ham-mob"
+          id="navbarNav"
+        >
+          <ul
+            class="navbar-nav d-lg-none d-md-none d-sm-block navbarNav ham-mob"
+          >
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/offers">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+
         <!-- Collapsible content -->
 
         <!-- Container wrapper -->
-      </nav>
+      </header>
       <!-- Navbar -->
 
-      
       <!-- Menu -->
       <nav
         class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-dark bg-dark p-2 menu-desk"
@@ -139,7 +128,6 @@
         </div>
       </nav>
 
-
       <!-- Items -->
       <!-- <div class="container-fluid items mt-4" >
         <div class="row">
@@ -155,7 +143,7 @@
         </div>
       </div> -->
 
-      <div class="nav navbar items-wrapper-mob">
+      <section class="items-wrapper-mob pb-3">
         <div class="flex items-start">
           <div class="mt-4 items">
             <div class="list_of_items d-flex flex-wrap items-mob">
@@ -365,38 +353,54 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="border flex justify-content-between footer">
+      <footer class="border flex justify-content-between gap-3 labels pt-4">
         <div class="w-100">
-          <h6 class="mb-4">Label</h6>
+          <h6 class="mb-3">Label</h6>
           <p>Cras elit massa</p>
           <p>sodales quis</p>
           <p>Maecanas bibendum</p>
           <p>mattis scelerisque</p>
         </div>
         <div class="w-100">
-          <h6 class="mb-4">Label</h6>
+          <h6 class="mb-3">Label</h6>
           <p>Cras elit massa</p>
           <p>sodales quis</p>
           <p>Maecanas bibendum</p>
           <p>mattis scelerisque</p>
         </div>
         <div class="w-100">
-          <h6 class="mb-4">Label</h6>
+          <h6 class="mb-3">Label</h6>
           <p>Cras elit massa</p>
           <p>sodales quis</p>
           <p>Maecanas bibendum</p>
           <p>mattis scelerisque</p>
         </div>
         <div class="w-100">
-          <h6 class="mb-4">Label</h6>
+          <h6 class="mb-3">Label</h6>
           <p>Cras elit massa</p>
           <p>sodales quis</p>
           <p>Maecanas bibendum</p>
           <p>mattis scelerisque</p>
         </div>
-      </div>
+      </footer>
+      <small class="pt-2 d-block text-center copyright footer">
+        Copyright
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="10"
+          height="10"
+          fill="currentColor"
+          class="bi bi-c-circle"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"
+          />
+        </svg>
+        2019 ShoppingCart. All rights reserved.
+      </small>
     </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
