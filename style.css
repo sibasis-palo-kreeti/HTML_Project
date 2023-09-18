@@ -50,11 +50,6 @@ body {
   margin-top: 4px;
 }
 
-/* For the search-box  */
-.search-box {
-  width: 15%;
-}
-
 /* For the mobile menu  */
 .mob-menu {
   font-size: 20px;
@@ -241,9 +236,11 @@ input[type="search"]::-ms-input-placeholder {
   }
   .bag button {
     font-size: 0.25px;
+    padding: 0.25rem;
   }
-  .bag{
-    display:none;
+  .bag {
+    /* display: none; */
+    font-size: 10px;
   }
 }
 
