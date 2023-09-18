@@ -242,6 +242,9 @@ input[type="search"]::-ms-input-placeholder {
   .bag button {
     font-size: 0.25px;
   }
+  .bag{
+    display:none;
+  }
 }
 
 /* For normal tablet screens */
