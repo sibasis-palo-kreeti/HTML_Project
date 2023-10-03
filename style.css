@@ -26,20 +26,7 @@ body {
   width: 35px;
 }
 
-.badge {
-  padding-left: 9px;
-  padding-right: 9px;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  border-radius: 9px;
-  border-color: #000;
-}
-
-.label-warning[href],
-.badge-warning[href] {
-  /* background-color: #c67605; */
-  background-color: #000;
-}
+/* For the badge */
 #lblCartCount {
   font-size: 12px;
   background: #fff;
@@ -47,7 +34,7 @@ body {
   padding: 0 8px;
   vertical-align: top;
   margin-left: -20px;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* For the mobile menu  */
@@ -55,11 +42,12 @@ body {
   font-size: 20px;
   background-color: #000;
   position: absolute;
-  top: 30px;
+  top: 65px;
   left: 0;
-  z-index: 1000;
+  z-index: 100 0;
   width: 110%;
   margin: 0 -15px 0 -15px;
+  padding-top: 0px;
 }
 
 /* For the search bar  */
@@ -69,27 +57,33 @@ body {
   border-width: 1px;
 }
 
+/* Chrome, Firefox, Opera, Safari 10.1+ */
 input[type="search"]::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: lightgray;
   opacity: 1; /* Firefox */
 }
 
+/* Internet Explorer 10-11 */
 input[type="search"]:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
   color: lightgray;
 }
 
+/* Microsoft Edge */
 input[type="search"]::-ms-input-placeholder {
-  /* Microsoft Edge */
   color: lightgray;
+}
+
+a:active {
+  background-color: gray;
+}
+a:hover {
+  background-color: gray;
 }
 
 /* For the cards */
 .items {
   width: 125%;
   justify-content: left;
-  gap: 1px;
 }
 
 .flex {
@@ -103,10 +97,8 @@ input[type="search"]::-ms-input-placeholder {
 }
 
 .item {
-  /* flex: 2 1 33%; */
   flex-basis: 30%;
   text-align: center;
-  /* width: 100%; */
 }
 
 .list_of_items {
@@ -117,10 +109,7 @@ input[type="search"]::-ms-input-placeholder {
   display: flex;
   flex-flow: row;
   -webkit-flex-flow: row;
-  /* justify-content: space-around;
-  justify-content: space-between;
-  justify-content: space-evenly; */
-  gap: 15px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -239,7 +228,6 @@ input[type="search"]::-ms-input-placeholder {
     padding: 0.25rem;
   }
   .bag {
-    /* display: none; */
     font-size: 10px;
   }
 }
