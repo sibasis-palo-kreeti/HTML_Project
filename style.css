@@ -1,10 +1,10 @@
 body {
   font-size: 12px;
 }
-
-.container {
+/* 
+.container{
   max-width: 100%;
-}
+} */
 
 .navbar {
   border-radius: 20px;
@@ -151,6 +151,10 @@ a:hover {
   width: 100px;
 }
 
+.bag button{
+  font-size: 14px;
+}
+
 .fa-1x {
   font-size: 1.5rem;
 }
@@ -218,24 +222,25 @@ a:hover {
 }
 
 /* For smaller tablet screens  */
-@media screen and (min-width: 618px) and (max-width: 735px) {
+@media screen and (min-width: 618px) and (max-width: 1199px) {
   body,
-  html {
+  html, .container {
     max-width: 100%;
   }
   .bag button {
-    font-size: 0.25px;
-    padding: 0.25rem;
+    font-size: 0.5px;
+    padding: 0.5rem;
   }
   .bag {
+    padding: 0.75rem;
     font-size: 10px;
   }
 }
 
 /* For normal tablet screens */
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1400px) {
   .bag button {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
