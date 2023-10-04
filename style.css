@@ -151,7 +151,7 @@ a:hover {
 }
 
 .bag button {
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .fa-1x {
@@ -240,7 +240,7 @@ a:hover {
 /* For normal tablet screens */
 @media screen and (max-width: 1400px) {
   .bag button {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 
