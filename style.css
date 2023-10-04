@@ -1,10 +1,6 @@
 body {
   font-size: 12px;
 }
-/* 
-.container{
-  max-width: 100%;
-} */
 
 .navbar {
   border-radius: 20px;
@@ -26,15 +22,19 @@ body {
   width: 35px;
 }
 
-/* For the badge */
-#lblCartCount {
-  font-size: 12px;
+/* For the cart count */
+.badge {
+  border-radius: 50%;
+  border-style: groove;
+  border-color: black;
+  border-width: 2px;
+  font-size: 8px;
   background: #fff;
   color: #000;
-  padding: 0 8px;
   vertical-align: top;
-  margin-left: -20px;
-  margin-top: 2px;
+  margin-left: -18px;
+  margin-top: -3px;
+  padding-top: 5px;
 }
 
 /* For the mobile menu  */
@@ -47,7 +47,6 @@ body {
   z-index: 100 0;
   width: 110%;
   margin: 0 -15px 0 -15px;
-  padding-top: 0px;
 }
 
 /* For the search bar  */
@@ -151,7 +150,7 @@ a:hover {
   width: 100px;
 }
 
-.bag button{
+.bag button {
   font-size: 14px;
 }
 
@@ -224,7 +223,8 @@ a:hover {
 /* For smaller tablet screens  */
 @media screen and (min-width: 618px) and (max-width: 1199px) {
   body,
-  html, .container {
+  html,
+  .container {
     max-width: 100%;
   }
   .bag button {
