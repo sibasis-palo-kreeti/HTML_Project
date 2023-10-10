@@ -1,382 +1,249 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <script defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+body {
+  font-size: 12px;
+}
 
-  <body>
-    <section class="container">
+.navbar {
+  border-radius: 20px;
+}
 
-      <!-- Header  -->
-      <header class="navbar navbar-expand-md bg-light top-bar px-2 mb-3">
-        <div
-          class="d-flex justify-content-between align-items-center flex-wrap w-100"
-        >
-          <!-- Logo  -->
-          <img src="assets/logo.png" alt="" class="logo" />
-          <section class="d-md-none d-lg-none d-flex gap-2 align-items-center">
-            <!-- Cart  -->
-            <div class="cart-mob">
-              <img class="cart-icon" src="assets/shopping-01-512.png"></img>
-              <span class="badge">2</span>
-            </div>
-            
-            <!-- Menu Button for mobile devices -->
-            <!-- Collapse button -->
-            <button
-              class="d-lg-none d-md-none navbar-toggler ham-mob"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <img class="border-0 ham-icon" src="assets/burger-menu-svgrepo-com.svg" />
-            </button>
-          </section>
+/* For the header  */
+.top-bar {
+  white-space: normal;
+}
 
-          <!-- Search bar -->
-          <div id="navbarSupportedContent" class="search-box">
-            <div id="navbar-search-autocomplete" class="form-outline">
-              <input
-                type="search"
-                id="form1"
-                class="form-control me-2 my-2"
-                placeholder="Search"
-              />
-            </div>
-          </div>
-        </div>
+.navbar-brand {
+  font-size: 12px;
+}
 
-        <!-- Mobile menu  -->
-        <div
-          class="collapse navbar-collapse mob-menu ham-mob"
-          id="navbarNav"
-        >
-          <ul
-            class="navbar-nav d-lg-none d-md-none d-sm-block navbarNav ham-mob"
-          >
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">Offers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">Testimonials</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </header>
+/* For the shopping cart icon in mobile view  */
+.cart-icon,
+.ham-icon {
+  height: 35px;
+  width: 35px;
+}
 
-      <!-- Menu for Desktop -->
-      <nav
-        class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-dark bg-dark p-2 menu-desk"
-      >
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto menu-desk">
-              <li class="nav-item">
-                <a class="nav-link navbar-brand" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navbar-brand" href="javascript:void(0)">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navbar-brand" href="javascript:void(0)">Offers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navbar-brand" href="javascript:void(0)"
-                  >Testimonials</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navbar-brand" href="javascript:void(0)">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+/* For the cart count */
+.badge {
+  border-radius: 50%;
+  border-style: groove;
+  border-color: black;
+  border-width: 2px;
+  font-size: 8px;
+  background: #fff;
+  color: #000;
+  vertical-align: top;
+  margin-left: -18px;
+  margin-top: -3px;
+  padding-top: 5px;
+}
 
-      
-      <section class="items-wrapper-mob pb-3">
-        <div class="flex items-start">
+/* For the mobile menu  */
+.mob-menu {
+  font-size: 20px;
+  background-color: #000;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  z-index: 100 0;
+  width: 110%;
+  margin: 0 -15px 0 -15px;
+}
 
-          <!-- Laptop Cards -->
-          <div class="mt-4 items">
-            <div class="list_of_items d-flex flex-wrap items-mob">
-              <div class="border p-2 item">
-                Lorem ipsum dolor <br />
-                <img class="p-4" src="assets/laptop.png" alt="" /> <br />
-                <div
-                  class="d-flex justify-content-between"
-                  style="text-align: left"
-                >
-                  <div>Rs. 1,00,000</div>
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-default btn-sm bg-blue btn-primary"
-                      style="text-align: right"
-                    >
-                      <b>Add to Cart</b>
-                    </button>
-                  </div>
-                </div>   
-              </div>
-              <div class="border p-2 item">
-                Lorem ipsum dolor <br />
-                <img class="p-4" src="assets/laptop.png" alt="" /> <br />
-                <div
-                  class="d-flex justify-content-between"
-                  style="text-align: left"
-                >
-                  <div>Rs. 1,00,000</div>
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-default btn-sm bg-blue btn-primary"
-                      style="text-align: right"
-                    >
-                      <b>Add to Cart</b>
-                    </button>
-                  </div>
-                </div>   
-              </div>
-              <div class="border p-2 item">
-                Lorem ipsum dolor <br />
-                <img class="p-4" src="assets/laptop.png" alt="" /> <br />
-                <div
-                  class="d-flex justify-content-between"
-                  style="text-align: left"
-                >
-                  <div>Rs. 1,00,000</div>
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-default btn-sm bg-blue btn-primary"
-                      style="text-align: right"
-                    >
-                      <b>Add to Cart</b>
-                    </button>
-                  </div>
-                </div>   
-              </div>
-              <div class="border p-2 item">
-                Lorem ipsum dolor <br />
-                <img class="p-4" src="assets/laptop.png" alt="" /> <br />
-                <div
-                  class="d-flex justify-content-between"
-                  style="text-align: left"
-                >
-                  <div>Rs. 1,00,000</div>
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-default btn-sm bg-blue btn-primary"
-                      style="text-align: right"
-                    >
-                      <b>Add to Cart</b>
-                    </button>
-                  </div>
-                </div>   
-              </div>
-              <div class="border p-2 item">
-                Lorem ipsum dolor <br />
-                <img class="p-4" src="assets/laptop.png" alt="" /> <br />
-                <div
-                  class="d-flex justify-content-between"
-                  style="text-align: left"
-                >
-                  <div>Rs. 1,00,000</div>
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-default btn-sm bg-blue btn-primary"
-                      style="text-align: right"
-                    >
-                      <b>Add to Cart</b>
-                    </button>
-                  </div>
-                </div>   
-              </div>
-              <div class="border p-2 item">
-                Lorem ipsum dolor <br />
-                <img class="p-4" src="assets/laptop.png" alt="" /> <br />
-                <div
-                  class="d-flex justify-content-between"
-                  style="text-align: left"
-                >
-                  <div>Rs. 1,00,000</div>
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-default btn-sm bg-blue btn-primary"
-                      style="text-align: right"
-                    >
-                      <b>Add to Cart</b>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="border p-2 item">
-                Lorem ipsum dolor <br />
-                <img class="p-4" src="assets/laptop.png" alt="" /> <br />
-                <div
-                  class="d-flex justify-content-between"
-                  style="text-align: left"
-                >
-                  <div>Rs. 1,00,000</div>
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-default btn-sm bg-blue btn-primary"
-                      style="text-align: right"
-                    >
-                      <b>Add to Cart</b>
-                    </button>
-                  </div>
-                </div>   
-              </div>
-              <div class="border p-2 item">
-                Lorem ipsum dolor <br />
-                <img class="p-4" src="assets/laptop.png" alt="" /> <br />
-                <div
-                  class="d-flex justify-content-between"
-                  style="text-align: left"
-                >
-                  <div>Rs. 1,00,000</div>
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-default btn-sm bg-blue btn-primary"
-                      style="text-align: right"
-                    >
-                      <b>Add to Cart</b>
-                    </button>
-                  </div>
-                </div>  
-              </div>
-              <div class="border p-2 item">
-                Lorem ipsum dolor <br />
-                <img class="p-4" src="assets/laptop.png" alt="" /> <br />
-                <div
-                  class="d-flex justify-content-between"
-                  style="text-align: left"
-                >
-                  <div>Rs. 1,00,000</div>
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-default btn-sm bg-blue btn-primary"
-                      style="text-align: right"
-                    >
-                      <b>Add to Cart</b>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+/* For the search bar  */
+.form-control {
+  border-radius: 20px;
+  border-color: lightgray;
+  border-width: 1px;
+}
 
-          <!-- Section to show items in your cart -->
-          <aside class="bag">
-            <p>Shopping cart</p>
-            <div class="flex justify-evenly w-full">
-              <img src="assets/laptop.png" alt="" class="bag-img" />
-              <p>x</p>
-              <p>1,00,000</p>
-            </div>
-            <div class="flex justify-evenly w-full">
-              <img src="assets/laptop.png" alt="" class="bag-img" />
-              <p>x</p>
-              <p>1,00,000</p>
-            </div>
-            <div class="border-t-1 mt-4">
-              <p class="text-center mt-2">Total: 2,00,000</p>
-              <div class="flex justify-content-between">
-                <!-- Empty Cart Button  -->
-                <button type="button" class="btn btn-secondary">
-                  Empty cart
-                </button>
-                <!-- Checkout Button  -->
-                <button type="button" class="btn btn-primary">Checkout</button>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+input[type="search"]::placeholder {
+  color: lightgray;
+  opacity: 1; /* Firefox */
+}
 
-      <!-- Footer  -->
-      <footer class="border flex justify-content-between gap-3 labels pt-4">
-        <div class="w-100">
-          <h6 class="mb-3">Label</h6>
-          <p>Cras elit massa</p>
-          <p>sodales quis</p>
-          <p>Maecanas bibendum</p>
-          <p>mattis scelerisque</p>
-        </div>
-        <div class="w-100">
-          <h6 class="mb-3">Label</h6>
-          <p>Cras elit massa</p>
-          <p>sodales quis</p>
-          <p>Maecanas bibendum</p>
-          <p>mattis scelerisque</p>
-        </div>
-        <div class="w-100">
-          <h6 class="mb-3">Label</h6>
-          <p>Cras elit massa</p>
-          <p>sodales quis</p>
-          <p>Maecanas bibendum</p>
-          <p>mattis scelerisque</p>
-        </div>
-        <div class="w-100">
-          <h6 class="mb-3">Label</h6>
-          <p>Cras elit massa</p>
-          <p>sodales quis</p>
-          <p>Maecanas bibendum</p>
-          <p>mattis scelerisque</p>
-        </div>
-      </footer>
+/* Internet Explorer 10-11 */
+input[type="search"]:-ms-input-placeholder {
+  color: lightgray;
+}
 
-      <!-- Copyright  -->
-      <small class="pt-2 d-block text-center copyright footer">
-        Copyright
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="10"
-          height="10"
-          fill="currentColor"
-          class="bi bi-c-circle"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"
-          />
-        </svg>
-        2019 ShoppingCart. All rights reserved.
-      </small>
-    </section>
-  </body>
-</html>
+/* Microsoft Edge */
+input[type="search"]::-ms-input-placeholder {
+  color: lightgray;
+}
+
+a:active {
+  background-color: gray;
+}
+a:hover {
+  background-color: gray;
+}
+
+/* For the cards */
+.items {
+  width: 125%;
+  justify-content: left;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.items-start {
+  align-items: start;
+}
+
+.item {
+  flex-basis: 30%;
+  text-align: center;
+}
+
+.list_of_items {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row;
+  -webkit-flex-flow: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-center,
+.mob-menu a {
+  text-align: center;
+}
+
+.border-t-1 {
+  border-top: 1px solid gray;
+}
+
+/* For the shopping bag  */
+.bag {
+  padding: 2rem;
+  border: 1px solid gray;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.bag p {
+  text-align: center;
+}
+
+.bag-img {
+  width: 100px;
+}
+
+.bag button {
+  font-size: 11px;
+  padding: 0.65rem;
+}
+
+.fa-1x {
+  font-size: 1.5rem;
+}
+
+.navbar-collapse a {
+  color: #fff;
+}
+
+.labels {
+  padding-top: 3;
+  max-width: 100%;
+}
+
+.copyright {
+  color: #909090;
+}
+
+/* For small screens*/
+@media screen and (max-width: 618px) {
+  body,
+  html,
+  .container {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  .footer,
+  .labels {
+    flex-direction: column !important;
+  }
+  .footer div,
+  .labels div {
+    width: max-content;
+    text-align: center;
+  }
+  .bag {
+    display: none;
+  }
+  .search-box {
+    padding-top: 5px;
+    width: 100%;
+  }
+
+  .nav-desk {
+    display: none;
+  }
+  .menu-desk {
+    display: none;
+  }
+
+  .logo {
+    height: 50%;
+    width: 50%;
+  }
+  .item {
+    width: 100%;
+  }
+  .items-wrapper-mob {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .items-mob {
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
+    flex-grow: 100%;
+  }
+}
+
+/* For smaller tablet screens  */
+@media screen and (min-width: 618px) and (max-width: 1199px) {
+  body,
+  html,
+  .container {
+    max-width: 100%;
+  }
+  .bag button {
+    font-size: 0.5px;
+    padding: 0.5rem;
+  }
+  .bag {
+    padding: 0.75rem;
+    font-size: 10px;
+  }
+}
+
+/* For larger screens */
+@media screen and (min-width: 618px) {
+  .ham-mob {
+    display: none;
+  }
+  .cart-mob {
+    display: none;
+  }
+}
