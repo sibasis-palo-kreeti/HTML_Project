@@ -194,14 +194,12 @@ a:hover {
     padding-top: 5px;
     width: 100%;
   }
-
   .nav-desk {
     display: none;
   }
   .menu-desk {
     display: none;
   }
-
   .logo {
     height: 50%;
     width: 50%;
@@ -232,6 +230,7 @@ a:hover {
     padding: 0.5rem;
   }
   .bag {
+    padding: 2rem;
     font-size: 10px;
   }
 }
