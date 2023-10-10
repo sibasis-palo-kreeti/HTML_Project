@@ -131,9 +131,7 @@ a:hover {
 
 /* For the shopping bag  */
 .bag {
-  padding: 1rem;
-  margin-top: 2rem;
-  width: 25%;
+  padding: 2rem;
   border: 1px solid gray;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -152,6 +150,7 @@ a:hover {
 
 .bag button {
   font-size: 11px;
+  padding: 0.65rem;
 }
 
 .fa-1x {
@@ -161,8 +160,10 @@ a:hover {
 .navbar-collapse a {
   color: #fff;
 }
+
 .labels {
   padding-top: 3;
+  max-width: 100%;
 }
 
 .copyright {
@@ -179,7 +180,7 @@ a:hover {
   }
   .footer,
   .labels {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .footer div,
   .labels div {
@@ -228,18 +229,9 @@ a:hover {
     max-width: 100%;
   }
   .bag button {
-    font-size: 0.5px;
     padding: 0.5rem;
   }
   .bag {
-    padding: 0.75rem;
-    font-size: 10px;
-  }
-}
-
-/* For normal tablet screens */
-@media screen and (max-width: 1400px) {
-  .bag button {
     font-size: 10px;
   }
 }
