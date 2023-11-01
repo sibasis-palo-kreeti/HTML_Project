@@ -2,8 +2,10 @@ body {
   font-size: 12px;
 }
 
-.container{
-  position:relative;
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   min-height: 100vh;
 }
 
@@ -166,10 +168,15 @@ a:hover {
   color: #fff;
 }
 
-footer{
-  position: absolute;
+.foot-flex {
+  min-height: 100vh;
+}
+
+footer {
+  position: relative;
   bottom: 0px;
-  width:100%
+  width: 100%;
+  margin-top: auto;
 }
 
 .labels {
